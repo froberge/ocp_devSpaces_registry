@@ -5,7 +5,7 @@ projects:
   - name: quarkus-quickstart
     source:
       type: github
-      location: 'https://github.com/froberge/quarkus-quickstart'
+      location: 'https://github.com/froberge/quarkus-quickstart.git'
       branch: main
 components:
   - id: redhat/quarkus-java11/latest
