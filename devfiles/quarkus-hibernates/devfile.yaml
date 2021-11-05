@@ -1,12 +1,11 @@
 apiVersion: 1.0.0
 metadata:
-  name: quarkus-quickstart-test
+  name: quarkus-quickstarts
 projects:
   - name: quarkus-quickstarts
     source:
-      location: 'https://github.com/LaurentMargelidon/IntegrationPoc.git'
+      location: 'https://github.com/froberge/quarkus-quickstarts.git'
       type: git
-      sparseCheckoutDir: quarkus-quickstarts
 components:
   - id: redhat/quarkus-java11/latest
     type: chePlugin
