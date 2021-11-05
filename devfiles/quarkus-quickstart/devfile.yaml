@@ -4,8 +4,9 @@ metadata:
 projects:
   - name: quarkus-quickstarts
     source:
-      location: 'https://github.com/froberge/quarkus-quickstarts.git'
+      location: 'https://github.com/LaurentMargelidon/IntegrationPoc.git'
       type: git
+      sparseCheckoutDir: quarkus-quickstarts
 components:
   - id: redhat/quarkus-java11/latest
     type: chePlugin
