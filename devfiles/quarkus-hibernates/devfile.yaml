@@ -64,25 +64,25 @@ components:
 commands:
   - name: Package
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/quarkus-quickstarts/quarkus-quickstarts'
+      - workdir: '${CHE_PROJECTS_ROOT}/quarkus-quickstarts'
         type: exec
         command: ./mvnw package
         component: centos-quarkus-maven
   - name: Start Development mode (Hot reload + debug)
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/quarkus-quickstarts/quarkus-quickstarts'
+      - workdir: '${CHE_PROJECTS_ROOT}/quarkus-quickstarts'
         type: exec
         command: './mvnw compile quarkus:dev'
         component: centos-quarkus-maven
   - name: Package Native
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/quarkus-quickstarts/quarkus-quickstarts'
+      - workdir: '${CHE_PROJECTS_ROOT}/quarkus-quickstarts'
         type: exec
         command: ./mvnw package -Dnative -Dmaven.test.skip -Dquarkus.native.native-image-xmx=2G
         component: centos-quarkus-maven
   - name: Start Native
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/quarkus-quickstarts/quarkus-quickstarts/target'
+      - workdir: '${CHE_PROJECTS_ROOT}/quarkus-quickstarts/target'
         type: exec
         command: ./getting-started-1.0-SNAPSHOT-runner
         component: ubi-minimal
@@ -104,7 +104,7 @@ commands:
         type: vscode-launch
   - name: psql-init
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/quarkus-quickstarts/quarkus-quickstarts/src/main/resources/db'
+      - workdir: '${CHE_PROJECTS_ROOT}/quarkus-quickstarts/src/main/resources/db'
         type: exec
         command: psql -d shop -U shop -f product.sql
         component: postgres
