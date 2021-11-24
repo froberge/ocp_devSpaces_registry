@@ -1,10 +1,10 @@
 apiVersion: 1.0.0
 metadata:
-  name: integration-poc
+  generateName: ocp-servicemesh-demo-poc
 projects:
-  - name: integration-poc
+  - name: ocp-servicemesh-demo-poc
     source:
-      location: 'https://github.com/LaurentMargelidon/IntegrationPoc.git'
+      location: 'https://github.com/froberge/ocp-servicemesh-demo.git'
       type: github
 components:
   - mountSources: true
