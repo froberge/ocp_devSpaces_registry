@@ -53,18 +53,3 @@ components:
     volumes:
       - name: m2
         containerPath: /home/jboss/.m2
-    endpoints:
-      - name: quarkus-development-server
-        port: 8080
-      - name: hello-greeting-endpoint
-        port: 8080
-        attributes:
-          path: /hello/greeting/che-user
-      - name: debug
-        port: 5005
-        attributes:
-          public: 'false'
-      - name: tests
-        port: 8081
-        attributes:
-          public: 'false'
