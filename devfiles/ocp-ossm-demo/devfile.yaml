@@ -71,7 +71,7 @@ components:
       - value: cs_credit
         name: POSTGRES_DB 
 commands:
-  - name: psql-debit
+  - name: psql-credit-init
     actions:
       - workdir: '${CHE_PROJECTS_ROOT}/ocp-servicemesh-demo-poc/dbscripts'
         type: exec
