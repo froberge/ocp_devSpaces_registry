@@ -53,3 +53,50 @@ components:
     volumes:
       - name: m2
         containerPath: /home/jboss/.m2
+  - mountSources: true
+    memoryLimit: 512Mi
+    type: dockerimage
+    volumes:
+      - name: postgresql-data
+        containerPath: /var/lib/postgresql/data
+    alias: postgres-debit
+    image: postgres
+    env:
+      - value: /tmp/pgdata
+        name: PGDATA
+      - value: demodb
+        name: POSTGRES_USER
+      - value: Demo1234
+        name: POSTGRES_PASSWORD
+      - value: cs_debit
+        name: POSTGRES_DB
+  - mountSources: true
+    memoryLimit: 512Mi
+    type: dockerimage
+    volumes:
+      - name: postgresql-data
+        containerPath: /var/lib/postgresql/data
+    alias: postgres-credit
+    image: postgres
+    env:
+      - value: /tmp/pgdata
+        name: PGDATA
+      - value: demodb
+        name: POSTGRES_USER
+      - value: Demo1234
+        name: POSTGRES_PASSWORD
+      - value: cs_credit
+        name: POSTGRES_DB
+commands:        
+  - name: psql-debit
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/ocp-servicemesh-demo-poc/dbscripts'
+        type: exec
+        command: psql -d shop -U shop -f create-debit-db.sql
+        component: postgres-debit
+  - name: psql-credit
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/ocp-servicemesh-demo-poc/dbscripts'
+        type: exec
+        command: psql -d shop -U shop -f create-credit-db.sql
+        component: postgres-credit
