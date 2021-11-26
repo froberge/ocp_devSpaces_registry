@@ -18,7 +18,7 @@ components:
     volumes:
       - name: kubeconfig
         containerPath: /.kube
-    alias: oc
+    alias: oc-only
     image: 'quay.io/openshift/origin-cli:4.8'
   - mountSources: true
     command:
@@ -31,14 +31,14 @@ components:
     volumes:
       - name: kubeconfig
         containerPath: /.kube
-    alias: kustomize
+    alias: kustomize-only
     image: 'k8s.gcr.io/kustomize/kustomize:v3.8.7'
   - id: redhat/vscode-yaml/latest
     type: chePlugin
   - type: chePlugin
     id: redhat/quarkus-java11/latest
   - type: dockerimage
-    alias: maven
+    alias: full-terminal
     image: registry.redhat.io/codeready-workspaces/plugin-java11-rhel8@sha256:cff9e47f83c6140d442721ed4d78e029a55f98bdca8efffbba8513656a1b28a7
     env:
       - name: JAVA_OPTS
