@@ -4,7 +4,7 @@ metadata:
 projects:
   - name: simple-quarkus-crud
     source:
-      location: 'https://github.com/froberge/simple-quarkus-CRUD-example.git'
+      location: 'https://github.com/froberge/simple-quarkus-crud.git'
       type: git
       branch: main
 components:
