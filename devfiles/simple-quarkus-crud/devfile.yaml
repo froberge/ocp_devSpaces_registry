@@ -1,10 +1,10 @@
 apiVersion: 1.0.0
 metadata:
-  name: quarkus-quickstarts
+  name: simple-quarkus-crud
 projects:
-  - name: quarkus-quickstarts
+  - name: simple-quarkus-crud
     source:
-      location: 'https://github.com/froberge/quarkus-quickstarts.git'
+      location: 'https://github.com/froberge/simple-quarkus-CRUD-example.git'
       type: git
       branch: main
 components:
@@ -65,7 +65,7 @@ components:
 commands:
   - name: Package
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/quarkus-quickstarts'
+      - workdir: '${CHE_PROJECTS_ROOT}/simple-quarkus-crud-example'
         type: exec
         command: ./mvnw package
         component: centos-quarkus-maven
