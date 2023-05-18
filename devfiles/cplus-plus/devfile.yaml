@@ -22,6 +22,15 @@ components:
     image: 'quay.io/openshift/origin-cli:4.8'
   - mountSource: true
     alias: gcc
-    image: 'registry.redhat.io/devspaces/udi-rhel8@sha256:aa39ede33bcbda6aa2723d271c79ab8d8fd388c7dfcbc3d4ece745b7e9c84193'
+    image: 'registry.redhat.io/devspaces/udi-rhel8:3.5'
     memoryLimit: 2Gi
     sourceMapping: /projects
+    env:
+      - name: CHE_DASHBOARD_URL
+        value: 'https://devspaces.apps.home.myocp.net'
+      - name: CHE_PLUGIN_REGISTRY_URL
+        value: 'https://devspaces.apps.home.myocp.net/plugin-registry/v3'
+      - name: CHE_PLUGIN_REGISTRY_INTERNAL_URL
+        value: 'http://plugin-registry.devspaces.svc:8080/v3'
+      - name: OPENVSX_REGISTRY_URL
+        value: 'https://open-vsx.org'
