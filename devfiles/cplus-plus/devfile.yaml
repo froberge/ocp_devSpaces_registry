@@ -1,11 +1,11 @@
 schemaVersion: 2.1.0
 metadata:
   name: cplus-plus-devspaces
-projects:
-  - name: [TBD]}
-    source:
-      location: [TBD]
-      type: github
+# projects:
+#   - name: [TBD]}
+#     source:
+#       location: [TBD]
+#       type: github
 components:
   - mountSources: true
     command:
