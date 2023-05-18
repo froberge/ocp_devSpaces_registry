@@ -1,6 +1,6 @@
-# Code Ready Workspace Devfiles Registry
+# OpenShift Dev Spaces Devfiles Registry
 
-This repository contains devfiles for multiples differents languages to use with CodeReady Workspace and are ready to use. 
+This repository contains devfiles for multiples differents languages to use with OpenShift Dev Spaces Workspace and are ready to use. 
 
 I encourage you to clone this repository or devFiles you require to bootstraps your project.
 
